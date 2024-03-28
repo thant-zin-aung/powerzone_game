@@ -1,0 +1,218 @@
+.root {
+    -fx-background-color: white;
+
+}
+.game-logo {
+    -fx-font-family: Arial;
+    -fx-text-fill: red;
+    -fx-font-size: 20px;
+}
+.game-title-1 {
+    -fx-font-weight: bolder;
+}
+.game-title-3 {
+    -fx-font-size: 13px;
+}
+.beta-button {
+    -fx-font-family: "Arial Black";
+    -fx-pref-width: 70px;
+    -fx-pref-height: 5px;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-border-radius: 0px;
+    -fx-border-width: 0px;
+    -fx-border-style: solid;
+    -fx-background-color: #7500CA;
+    -fx-text-fill: white;
+
+}
+
+.game-player-label {
+    -fx-font-weight: bold;
+}
+
+.player-selection-box {
+    -fx-pref-height: 120px;
+    -fx-border-color: #FFA476;
+    -fx-border-radius: 15px;
+    -fx-border-width: 2px;
+    -fx-cursor: hand;
+}
+.player-selection-box:hover {
+    -fx-background-color: #FF5400;
+    -fx-background-radius: 15px;
+    -fx-effect: dropshadow( three-pass-box , #ff4400 , 20 , 0.52 , 0, 0 );
+}
+.selected-player-selection-box {
+    -fx-background-color: white;
+    -fx-background-radius: 15px;
+    -fx-effect: dropshadow( three-pass-box , #ff4400 , 20 , 0.52 , 0, 0 );
+}
+.player-selection-box-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bolder;
+    -fx-fill-height: 1px;
+}
+.home-page-title {
+    -fx-text-alignment: right;
+    -fx-font-size: 35px;
+    -fx-font-weight: bold;
+}
+.home-page-title-1 {
+    -fx-text-fill: #3EA4FB;
+}
+.form-wrapper {
+    -fx-background-color: #3EA4FB;
+    -fx-effect: dropshadow( three-pass-box , #3EA4FB , 20 , 0.5 , 0, 0 );
+}
+.icon-selection-style {
+    -fx-border-width: 0 0 2px 0;
+    -fx-border-style: dashed;
+    -fx-border-color: white;
+    -fx-effect: dropshadow( three-pass-box , white , 10 , 0.5 , 0, 0 );
+}
+.info-title {
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+}
+.name-box {
+    -fx-background-color: white;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+    -fx-border-color: #E0E0E0;
+    -fx-border-style: solid;
+    -fx-border-width: 1px;
+}
+.choose-icon-button {
+    -fx-pref-width: 100px;
+    -fx-pref-height: 35px;
+    -fx-background-color: white;
+    -fx-background-radius: 20px;
+    -fx-border-style: solid;
+    -fx-border-color: #E0E0E0;
+    -fx-border-width: 1px;
+    -fx-border-radius: 20px;
+    -fx-cursor: hand;
+}
+.choose-icon-button:hover {
+    -fx-border-color: #3EA4FB;
+    -fx-background-color: #3EA4FB;
+    -fx-text-fill: white;
+}
+.side-copyright-bar {
+    -fx-background-color: #E42900;
+    -fx-background-radius: 0 30px 0 0;
+    -fx-pref-width: 170px;
+    -fx-pref-height: 20px;
+}
+.copyright-label {
+    -fx-font-weight: bold;
+    -fx-font-size: 9px;
+}
+.info-box {
+    -fx-background-color: white;
+    -fx-background-radius: 10px;
+}
+.continue-button {
+    -fx-pref-width: 600px;
+    -fx-pref-height: 50px;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-border-style: solid;
+    -fx-border-radius: 10px;
+    -fx-border-width: 1px;
+    -fx-border-color: white;
+    -fx-cursor: hand;
+    -fx-background-color: #3EA4FB;
+    -fx-background-radius: 10px;
+}
+.continue-button:hover {
+    -fx-effect: dropshadow( three-pass-box , white , 20 , 0.52 , 0, 0 );
+}
+.vs-style {
+    -fx-font-style: italic;
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+    -fx-text-fill: linear-gradient(from 25px 25px to 100px 100px, #FFD7A4, #FFA4A4);
+}
+.start-game-button {
+    -fx-background-color: black;
+    -fx-font-size: 16px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-border-style: solid;
+    -fx-border-width: 1px;
+    -fx-border-color: white;
+    -fx-border-radius: 7px;
+    -fx-background-radius: 7px;
+    -fx-cursor: hand;
+}
+.start-game-button:hover {
+    -fx-background-color: white;
+    -fx-text-fill: black;
+}
+
+.key-set-style:hover {
+    -fx-effect: dropshadow( three-pass-box , yellow , 25 , 0.7 , 0, 0 );
+    -fx-cursor: hand;
+}
+.key-set-label-style {
+    -fx-text-fill: yellow;
+    -fx-font-weight: bold;
+    -fx-font-size: 35px;
+}
+.key-set-wrapper-container-selection {
+    -fx-effect: dropshadow( three-pass-box , yellow , 25 , 0.7 , 0, 0 );
+}
+
+.key-set-selection-button {
+    -fx-pref-width: 200px;
+    -fx-pref-height: 40px;
+    -fx-background-color: white;
+    -fx-border-style: solid;
+    -fx-border-width: 0px;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+.key-set-selection-front-button {
+    -fx-border-width: 2px 0 2px 2px;
+    -fx-border-radius: 7px 0 0 7px;
+    -fx-text-fill: red;
+}
+.key-set-selection-back-button {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+}
+.game-starting-label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+.energy-bar {
+    /*-fx-pref-width: 200px;*/
+    -fx-pref-height: 6px;
+    -fx-accent: green;
+}
+.energy-bar > .bar {
+    -fx-background-insets: 1 1 2 1;
+    -fx-padding: 0.2em;
+}
+.energy-fill-style {
+    -fx-accent: orange;
+}
+
+.red-power-effect {
+    -fx-effect: dropshadow( three-pass-box , red , 41 ,0.14 , 0 , 0 );
+}
+.deep-pink-power-effect {
+    -fx-effect: dropshadow( three-pass-box , deeppink , 41 ,0.14 , 0 , 0 );
+}
+.deep-think-pink-power-effect {
+    -fx-effect: dropshadow( three-pass-box , deeppink , 30 ,0.50 , 0 , 0 );
+}
+.orange-power-effect {
+    -fx-effect: dropshadow( three-pass-box , orange , 30 ,0.60 , 0 , 0 );
+}

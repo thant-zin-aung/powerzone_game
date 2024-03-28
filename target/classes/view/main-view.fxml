@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" styleClass="root" stylesheets="@../stylesheets/main-view-style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.game.catch_me_if_you_can_final.controller.MainController">
+   <children>
+      <AnchorPane fx:id="homeView" prefHeight="720.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" fillHeight="false" prefHeight="56.0" prefWidth="419.0" spacing="10.0" AnchorPane.leftAnchor="27.0" AnchorPane.topAnchor="24.0">
+               <children>
+                  <ImageView fitHeight="57.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/game_icons/power_zone.png" />
+                     </image>
+                  </ImageView>
+                  <VBox prefHeight="44.0" prefWidth="222.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" fillHeight="false" prefHeight="14.0" prefWidth="222.0">
+                           <children>
+                              <HBox prefHeight="23.0" prefWidth="144.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="POWER">
+                                       <styleClass>
+                                          <String fx:value="game-logo" />
+                                          <String fx:value="game-title-1" />
+                                       </styleClass>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ZONE">
+                                       <styleClass>
+                                          <String fx:value="game-logo" />
+                                          <String fx:value="game-title-2" />
+                                       </styleClass>
+                                    </Text>
+                                 </children>
+                              </HBox>
+                              <Button mnemonicParsing="false" prefHeight="17.0" prefWidth="59.0" styleClass="beta-button" text="beta" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="12.0" prefWidth="222.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="game-title-3" text="created by blacksky" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <VBox prefHeight="562.0" prefWidth="419.0" spacing="20.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="27.0" AnchorPane.topAnchor="133.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="game-player-label" text="Select Game Player" />
+                  <VBox fx:id="sideBar" alignment="CENTER" prefHeight="524.0" prefWidth="419.0" spacing="10.0">
+                     <children>
+                        <HBox fx:id="twoPlayerBox" alignment="CENTER" fillHeight="false" onMouseClicked="#clickOnPlayerBoxes" onMouseEntered="#hoverOnPlayerBoxes" onMouseExited="#hoverExitOnPlayerBoxes" prefHeight="100.0" prefWidth="200.0" spacing="70.0" styleClass="player-selection-box">
+                           <children>
+                              <VBox alignment="CENTER_LEFT" fillWidth="false" prefHeight="85.0" prefWidth="163.0">
+                                 <children>
+                                    <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/game_icons/two.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="player-selection-box-title" text="PLAYERS" wrappingWidth="104.52880859375" />
+                                 </children>
+                              </VBox>
+                              <ImageView fitHeight="110.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/game_icons/love_bird.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                        <HBox fx:id="threePlayerBox" alignment="CENTER" fillHeight="false" layoutX="10.0" layoutY="10.0" onMouseClicked="#clickOnPlayerBoxes" onMouseEntered="#hoverOnPlayerBoxes" onMouseExited="#hoverExitOnPlayerBoxes" prefHeight="100.0" prefWidth="200.0" spacing="70.0" styleClass="player-selection-box">
+                           <children>
+                              <VBox alignment="CENTER_LEFT" fillWidth="false" prefHeight="85.0" prefWidth="163.0">
+                                 <children>
+                                    <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/game_icons/three.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="player-selection-box-title" text="PLAYERS" wrappingWidth="104.52880859375" />
+                                 </children>
+                              </VBox>
+                              <ImageView fitHeight="110.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/game_icons/koala.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                        <HBox fx:id="fourPlayerBox" alignment="CENTER" fillHeight="false" layoutX="10.0" layoutY="161.0" onMouseClicked="#clickOnPlayerBoxes" onMouseEntered="#hoverOnPlayerBoxes" onMouseExited="#hoverExitOnPlayerBoxes" prefHeight="100.0" prefWidth="200.0" spacing="70.0" styleClass="player-selection-box">
+                           <children>
+                              <VBox alignment="CENTER_LEFT" fillWidth="false" prefHeight="85.0" prefWidth="163.0">
+                                 <children>
+                                    <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/game_icons/four.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="player-selection-box-title" text="PLAYERS" wrappingWidth="104.52880859375" />
+                                 </children>
+                              </VBox>
+                              <ImageView fitHeight="110.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/game_icons/blue_bunny.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                        <HBox fx:id="twoVsTwoBox" alignment="CENTER" fillHeight="false" layoutX="10.0" layoutY="312.0" onMouseClicked="#clickOnPlayerBoxes" onMouseEntered="#hoverOnPlayerBoxes" onMouseExited="#hoverExitOnPlayerBoxes" prefHeight="100.0" prefWidth="200.0" spacing="70.0" styleClass="player-selection-box">
+                           <children>
+                              <VBox alignment="CENTER_LEFT" fillWidth="false" prefHeight="64.0" prefWidth="163.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="51.0" prefWidth="163.0" spacing="5.0">
+                                       <children>
+                                          <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/game_icons/two.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="VS" wrappingWidth="48.52880859375">
+                                             <font>
+                                                <Font name="Arial Bold" size="36.0" />
+                                             </font>
+                                          </Text>
+                                          <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="17.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/game_icons/two.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </HBox>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="have more fun" />
+                                 </children>
+                              </VBox>
+                              <ImageView fitHeight="110.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/game_icons/z_panda.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <AnchorPane fx:id="introView" prefHeight="662.0" prefWidth="797.0" AnchorPane.bottomAnchor="29.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="29.0">
+               <children>
+                  <ImageView fitHeight="170.0" fitWidth="174.0" layoutX="537.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/game_icons/panda.png" />
+                     </image>
+                     <effect>
+                        <Reflection fraction="0.65" topOffset="5.0" />
+                     </effect>
+                  </ImageView>
+                  <ImageView fitHeight="110.0" fitWidth="110.0" layoutX="326.0" layoutY="202.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/game_icons/mouse.png" />
+                     </image>
+                     <effect>
+                        <Reflection />
+                     </effect>
+                  </ImageView>
+                  <ImageView fitHeight="243.0" fitWidth="256.0" layoutX="22.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/game_icons/blue-bird.png" />
+                     </image>
+                     <effect>
+                        <Reflection fraction="0.51" />
+                     </effect>
+                  </ImageView>
+                  <Text fill="#3ea4fb" layoutX="542.0" layoutY="430.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GET BETTER" wrappingWidth="221.99996948242188">
+                     <styleClass>
+                        <String fx:value="home-page-title-1" />
+                        <String fx:value="home-page-title" />
+                     </styleClass>
+                  </Text>
+                  <Text layoutX="501.0" layoutY="475.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AT TEAMFIGHT" wrappingWidth="262.9999694824219">
+                     <styleClass>
+                        <String fx:value="home-page-title-1" />
+                        <String fx:value="home-page-title" />
+                     </styleClass>
+                  </Text>
+                  <Text layoutX="501.0" layoutY="520.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TACTICS" wrappingWidth="262.9999694824219">
+                     <styleClass>
+                        <String fx:value="home-page-title-1" />
+                        <String fx:value="home-page-title" />
+                     </styleClass>
+                  </Text>
+                  <Text layoutX="404.0" layoutY="556.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Powerzone is the most enjoyable sample and easiest" textAlignment="RIGHT" wrappingWidth="359.99999237060547" AnchorPane.rightAnchor="33.00000762939453" />
+                  <Text fill="#008cff" layoutX="593.0" layoutY="576.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" give you an impression." AnchorPane.rightAnchor="33.03076171875">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="439.0" layoutY="576.0" strokeType="OUTSIDE" strokeWidth="0.0" text="supower game that will" AnchorPane.rightAnchor="204.0595703125" />
+                  <Text fill="#ff6400" layoutX="661.0" layoutY="595.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Blacksky @ 2022">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="156.0" fitWidth="154.0" layoutX="152.0" layoutY="401.0" pickOnBounds="true" preserveRatio="true" rotate="7.1">
+                     <image>
+                        <Image url="@../images/game_icons/super_cat.png" />
+                     </image>
+                     <effect>
+                        <Reflection bottomOpacity="0.08" fraction="0.57" topOffset="10.0" topOpacity="0.4" />
+                     </effect>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="formView" prefHeight="720.0" prefWidth="740.0" styleClass="form-wrapper" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="540.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <VBox fx:id="formWrapper" alignment="TOP_CENTER" layoutX="70.0" layoutY="71.0" prefHeight="653.0" prefWidth="600.0" spacing="20.0" AnchorPane.bottomAnchor="-4.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="71.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="74.0" prefWidth="570.0">
+                           <children>
+                              <Text fx:id="fillInfoText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="info-title" text="Fill up the info" wrappingWidth="119.9999771118164" />
+                           </children>
+                        </HBox>
+                        <HBox fx:id="formInfoBox1" alignment="CENTER" prefHeight="87.0" prefWidth="600.0" spacing="10.0" styleClass="info-box">
+                           <children>
+                              <TextField fx:id="player1Name" prefHeight="35.0" prefWidth="300.0" promptText="Enter name" styleClass="name-box" />
+                              <Button fx:id="player1IconButton" mnemonicParsing="false" onMouseClicked="#clickOnIconButtons" styleClass="choose-icon-button" text="Icon">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Button>
+                              <ImageView fx:id="player1Icon" fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true" />
+                              <Pane prefHeight="74.0" prefWidth="73.0" HBox.hgrow="ALWAYS" />
+                              <RadioButton fx:id="player1HunterRadio" mnemonicParsing="false" prefHeight="21.0" prefWidth="100.0" text="Hunter">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="hunterGroup" />
+                                 </toggleGroup>
+                              </RadioButton>
+                           </children>
+                           <effect>
+                              <DropShadow color="WHITE" height="61.43" radius="41.875" spread="0.3" width="108.07" />
+                           </effect>
+                           <padding>
+                              <Insets left="15.0" right="10.0" />
+                           </padding>
+                        </HBox>
+                        <HBox fx:id="formInfoBox2" alignment="CENTER" layoutX="10.0" layoutY="104.0" prefHeight="87.0" prefWidth="600.0" spacing="10.0" styleClass="info-box">
+                           <children>
+                              <TextField fx:id="player2Name" prefHeight="35.0" prefWidth="300.0" promptText="Enter name" styleClass="name-box" />
+                              <Button fx:id="player2IconButton" mnemonicParsing="false" onMouseClicked="#clickOnIconButtons" styleClass="choose-icon-button" text="Icon">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Button>
+                              <ImageView fx:id="player2Icon" fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true" />
+                              <Pane prefHeight="74.0" prefWidth="73.0" HBox.hgrow="ALWAYS" />
+                              <RadioButton fx:id="player2HunterRadio" mnemonicParsing="false" prefWidth="100.0" text="Hunter" toggleGroup="$hunterGroup" />
+                           </children>
+                           <effect>
+                              <DropShadow color="WHITE" height="61.43" radius="41.875" spread="0.3" width="108.07" />
+                           </effect>
+                           <padding>
+                              <Insets left="15.0" right="10.0" />
+                           </padding>
+                        </HBox>
+                        <HBox fx:id="formInfoBox3" alignment="CENTER" layoutX="10.0" layoutY="305.0" prefHeight="87.0" prefWidth="600.0" spacing="10.0" styleClass="info-box">
+                           <children>
+                              <TextField fx:id="player3Name" prefHeight="35.0" prefWidth="300.0" promptText="Enter name" styleClass="name-box" />
+                              <Button fx:id="player3IconButton" mnemonicParsing="false" onMouseClicked="#clickOnIconButtons" styleClass="choose-icon-button" text="Icon">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Button>
+                              <ImageView fx:id="player3Icon" fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true" />
+                              <Pane prefHeight="74.0" prefWidth="73.0" HBox.hgrow="ALWAYS" />
+                              <RadioButton fx:id="player3HunterRadio" mnemonicParsing="false" prefWidth="100.0" text="Hunter" toggleGroup="$hunterGroup" />
+                           </children>
+                           <effect>
+                              <DropShadow color="WHITE" height="61.43" radius="41.875" spread="0.3" width="108.07" />
+                           </effect>
+                           <padding>
+                              <Insets left="15.0" right="10.0" />
+                           </padding>
+                        </HBox>
+                        <HBox fx:id="formInfoBox4" alignment="CENTER" layoutX="10.0" layoutY="412.0" prefHeight="87.0" prefWidth="600.0" spacing="10.0" styleClass="info-box">
+                           <children>
+                              <TextField fx:id="player4Name" prefHeight="35.0" prefWidth="300.0" promptText="Enter name" styleClass="name-box" />
+                              <Button fx:id="player4IconButton" mnemonicParsing="false" onMouseClicked="#clickOnIconButtons" styleClass="choose-icon-button" text="Icon">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Button>
+                              <ImageView fx:id="player4Icon" fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true" />
+                              <Pane prefHeight="74.0" prefWidth="73.0" HBox.hgrow="ALWAYS" />
+                              <RadioButton fx:id="player4HunterRadio" mnemonicParsing="false" prefWidth="100.0" text="Hunter" toggleGroup="$hunterGroup" />
+                           </children>
+                           <effect>
+                              <DropShadow color="WHITE" height="61.43" radius="41.875" spread="0.3" width="108.07" />
+                           </effect>
+                           <padding>
+                              <Insets left="15.0" right="10.0" />
+                           </padding>
+                        </HBox>
+                        <AnchorPane prefHeight="74.0" prefWidth="600.0">
+                           <children>
+                              <Button fx:id="continueButton" layoutX="3.0" layoutY="12.0" mnemonicParsing="false" onMouseClicked="#clickOnContinueButton" prefWidth="565.0" styleClass="continue-button" text="Continue" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <HBox fx:id="vsLabelWrapper" alignment="CENTER" fillHeight="false" prefHeight="56.0" prefWidth="600.0" spacing="5.0" visible="false">
+                           <children>
+                              <ImageView fx:id="firstTotalPlayer" fitHeight="27.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/game_icons/one.png" />
+                                 </image>
+                              </ImageView>
+                              <Label styleClass="vs-style" text="VS" />
+                              <ImageView fx:id="secondTotalPlayer" fitHeight="27.0" fitWidth="24.0" layoutX="281.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/game_icons/one.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <HBox alignment="CENTER" layoutX="645.0" layoutY="604.0" prefHeight="30.0" prefWidth="236.0" rotate="-90.0" styleClass="side-copyright-bar" AnchorPane.bottomAnchor="96.0" AnchorPane.rightAnchor="-75.0">
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="copyright-label" text="COPYRIGHT @ 2022 - BLACKSKY" />
+                     </children>
+                  </HBox>
+                  <HBox fx:id="iconSelectionBar" alignment="CENTER" prefHeight="80.0" prefWidth="740.0" spacing="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="keySetView" prefHeight="720.0" prefWidth="1280.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="1080.0" fitWidth="1920.0" layoutX="363.0" layoutY="237.0" pickOnBounds="true" preserveRatio="true" rotate="-45.0" AnchorPane.bottomAnchor="-597.0" AnchorPane.rightAnchor="-1003.0" AnchorPane.topAnchor="237.0">
+               <image>
+                  <Image url="@../images/game_icons/black-screen.jpg" />
+               </image>
+            </ImageView>
+            <HBox alignment="CENTER_LEFT" fillHeight="false" layoutX="24.0" layoutY="24.0" prefHeight="57.0" prefWidth="316.0" spacing="10.0">
+               <children>
+                  <ImageView fitHeight="57.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/game_icons/power_zone.png" />
+                     </image>
+                  </ImageView>
+                  <VBox prefHeight="44.0" prefWidth="222.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" fillHeight="false" prefHeight="14.0" prefWidth="222.0">
+                           <children>
+                              <HBox prefHeight="23.0" prefWidth="144.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="POWER">
+                                       <styleClass>
+                                          <String fx:value="game-logo" />
+                                          <String fx:value="game-title-1" />
+                                       </styleClass>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ZONE">
+                                       <styleClass>
+                                          <String fx:value="game-logo" />
+                                          <String fx:value="game-title-2" />
+                                       </styleClass>
+                                    </Text>
+                                 </children>
+                              </HBox>
+                              <Button mnemonicParsing="false" prefHeight="17.0" prefWidth="59.0" styleClass="beta-button" text="beta" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="12.0" prefWidth="222.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="game-title-3" text="created by blacksky" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <VBox fx:id="keySetWrapperContainer" alignment="CENTER" layoutX="30.0" layoutY="152.0" prefHeight="460.0" prefWidth="1220.0" spacing="20.0" AnchorPane.bottomAnchor="108.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="152.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="220.0" prefWidth="1220.0" spacing="20.0">
+                     <children>
+                        <StackPane fx:id="keySet1Wrapper" prefHeight="220.0" prefWidth="600.0">
+                           <children>
+                              <ImageView fitHeight="220.0" fitWidth="600.0" pickOnBounds="true" styleClass="key-set-style">
+                                 <image>
+                                    <Image url="@../images/game_icons/keyset-1.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="keySetLabel1" styleClass="key-set-label-style" text="Label" visible="false">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </StackPane>
+                        <StackPane fx:id="keySet2Wrapper" layoutX="320.0" layoutY="10.0" prefHeight="220.0" prefWidth="600.0">
+                           <children>
+                              <ImageView fitHeight="220.0" fitWidth="600.0" pickOnBounds="true" styleClass="key-set-style">
+                                 <image>
+                                    <Image url="@../images/game_icons/keyset-2.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="keySetLabel2" styleClass="key-set-label-style" text="Label" visible="false">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </StackPane>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="220.0" prefWidth="1220.0" spacing="20.0">
+                     <children>
+                        <StackPane fx:id="keySet3Wrapper" prefHeight="220.0" prefWidth="600.0">
+                           <children>
+                              <ImageView fitHeight="220.0" fitWidth="600.0" pickOnBounds="true" styleClass="key-set-style">
+                                 <image>
+                                    <Image url="@../images/game_icons/keyset-3.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="keySetLabel3" styleClass="key-set-label-style" text="Label" visible="false">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </StackPane>
+                        <StackPane fx:id="keySet4Wrapper" layoutX="320.0" layoutY="10.0" prefHeight="220.0" prefWidth="600.0">
+                           <children>
+                              <ImageView fitHeight="220.0" fitWidth="600.0" pickOnBounds="true" styleClass="key-set-style">
+                                 <image>
+                                    <Image url="@../images/game_icons/keyset-4.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="keySetLabel4" styleClass="key-set-label-style" text="Label" visible="false">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </StackPane>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Button layoutX="987.0" layoutY="646.0" mnemonicParsing="false" onMouseClicked="#clickOnStartGameButton" prefHeight="47.0" prefWidth="172.0" styleClass="start-game-button" text="START GAME" AnchorPane.bottomAnchor="24.0" AnchorPane.rightAnchor="30.0" />
+            <Text fill="WHITE" layoutX="799.0" layoutY="681.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SELECT YOUR KEYSET" AnchorPane.bottomAnchor="31.0" AnchorPane.rightAnchor="258.6689453125">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="721.0" layoutY="635.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose the right keyset to get more gaming experience" wrappingWidth="250.0" AnchorPane.bottomAnchor="64.4462890625" AnchorPane.rightAnchor="309.0">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Text>
+            <HBox alignment="CENTER" layoutX="372.0" layoutY="14.0" prefHeight="60.0" prefWidth="840.0" AnchorPane.rightAnchor="68.0" AnchorPane.topAnchor="14.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="60.0" prefWidth="427.0">
+                     <children>
+                        <Button fx:id="playerKeySetFront1" focusTraversable="false" mnemonicParsing="false" prefHeight="31.0" prefWidth="113.0">
+                           <styleClass>
+                              <String fx:value="key-set-selection-button" />
+                              <String fx:value="key-set-selection-front-button" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="playerKeySetBack1" mnemonicParsing="false" onMouseClicked="#clickOnKeySetButton" text="No Keyset">
+                           <styleClass>
+                              <String fx:value="key-set-selection-button" />
+                              <String fx:value="key-set-selection-back-button" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="217.0" layoutY="10.0" prefHeight="60.0" prefWidth="427.0">
+                     <children>
+                        <Button fx:id="playerKeySetFront2" mnemonicParsing="false" prefHeight="31.0" prefWidth="113.0">
+                           <styleClass>
+                              <String fx:value="key-set-selection-button" />
+                              <String fx:value="key-set-selection-front-button" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="playerKeySetBack2" mnemonicParsing="false" onMouseClicked="#clickOnKeySetButton" text="No Keyset">
+                           <styleClass>
+                              <String fx:value="key-set-selection-button" />
+                              <String fx:value="key-set-selection-back-button" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="331.0" layoutY="74.0" prefHeight="60.0" prefWidth="840.0" AnchorPane.rightAnchor="109.0" AnchorPane.topAnchor="74.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="60.0" prefWidth="427.0">
+                     <children>
+                        <Button fx:id="playerKeySetFront3" mnemonicParsing="false" prefHeight="31.0" prefWidth="113.0">
+                           <styleClass>
+                              <String fx:value="key-set-selection-button" />
+                              <String fx:value="key-set-selection-front-button" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="playerKeySetBack3" mnemonicParsing="false" onMouseClicked="#clickOnKeySetButton" text="No Keyset">
+                           <styleClass>
+                              <String fx:value="key-set-selection-button" />
+                              <String fx:value="key-set-selection-back-button" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="217.0" layoutY="10.0" prefHeight="60.0" prefWidth="427.0">
+                     <children>
+                        <Button fx:id="playerKeySetFront4" mnemonicParsing="false" prefHeight="31.0" prefWidth="113.0">
+                           <styleClass>
+                              <String fx:value="key-set-selection-button" />
+                              <String fx:value="key-set-selection-front-button" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="playerKeySetBack4" mnemonicParsing="false" onMouseClicked="#clickOnKeySetButton" text="No Keyset">
+                           <styleClass>
+                              <String fx:value="key-set-selection-button" />
+                              <String fx:value="key-set-selection-back-button" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox fx:id="gameStartingLabelWrapper" alignment="CENTER_LEFT" layoutX="30.0" layoutY="644.0" prefHeight="60.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="30.0">
+               <children>
+                  <Label styleClass="game-starting-label" text="Game starting in " />
+                  <Label fx:id="gameStartingLabel" styleClass="game-starting-label" text="5" />
+                  <Label styleClass="game-starting-label" text="....." />
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="gameView" prefHeight="720.0" prefWidth="1280.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+   </children>
+</AnchorPane>

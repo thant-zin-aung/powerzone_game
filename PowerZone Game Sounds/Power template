@@ -1,0 +1,42 @@
+    private final int energyFillTime = 5;
+    private final double FADE_DURATION = 1;
+    private final Player player;
+    private boolean isEnergyFull = false;
+    
+    public PinkBunnyPower(Player player) {
+        this.player = player;
+    }
+
+    @Override
+    public void use() {
+        if ( !isEnergyFull ) return;
+        new AudioPlayer().play("pinkBunny",1);
+        
+        startEnergyFillTimer();
+    }
+
+    private void startEnergyFillTimer() {
+        isEnergyFull=false;
+        player.getEnergyBar().getStyleClass().add("energy-fill-style");
+        new Thread(() -> {
+            Task<Double> energyFillTask = new Task<Double>() {
+                @Override
+                protected Double call() throws Exception {
+                    for ( int id = 0 ; id < energyFillTime ; id++ ) {
+                        try {
+                            updateProgress(id+1,energyFillTime);
+                            Thread.sleep(1000);
+                        }catch ( Exception e ) {
+                            e.printStackTrace();
+                        }
+                    }
+                    isEnergyFull=true;
+                    player.getEnergyBar().getStyleClass().removeIf(s->s.equalsIgnoreCase("energy-fill-style"));
+                    new AudioPlayer().play("fullEnergy",1);
+                    return null;
+                }
+            };
+            Platform.runLater(() -> player.getEnergyBar().progressProperty().bind(energyFillTask.progressProperty()));
+            energyFillTask.run();
+        }).start();
+    }
